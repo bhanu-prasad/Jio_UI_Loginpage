@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="JioMart_logo.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Buy Grocery Online at Best Prices Pan India</title>
+    <link rel="stylesheet" href="loginstyle.css">
+</head>
+<body>
+  <nav class="nav navbar">
+      <div class="nav navbar-brand">Hello</div>
+  </nav>
+    <div class="container-fluid ">
+      <div class="lgncont">
+        <div class="mbl ">
+          <img src="login-banner.jpg" class="banner" alt="Banner">
+        </div>
+        <div class="form ">
+            <div class="formbd mt-4">
+              <h2>Sign in</h2>
+              <div>
+                <p class="">Sign in to access your Orders, Offers and Wishlist.</p>
+                <form action="#">
+                  <div class=" lgnform p-2">
+                    <span style="border-right:1px solid #000;" class="mr-2 pr-2">+91 </span>
+                    <input type="tel" class="  " id="mobile" autofocus onkeypress="return isNumberKey(event)" maxlength="10" placeholder="Enter your mobile no.">
+                    
+                    <script>
+                      function isNumberKey(evt)
+                      {
+                        var charCode = (evt.which) ? evt.which : event.keyCode
+                        if (charCode < 48 || charCode > 57)
+                        return false;
+                      
+                        return true;
+                      }
+                      </script>
+                      
+                  </div>
+                  <span class="text-danger error" id="err"><i>Please enter a valid mobile number!</i><br></span>
+                  <br>
+                  <div class="btnalign">
+                  <button class="btn btn-primary btn1 btn-block" onclick="validate()" ><i class="fa fa-chevron-right"></i></button>
+                </div>
+                </form>
+              </div>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    </div>
+    
+    
+</body>
+<footer class="text-center footer jumbotron">
+  
+  <p class="m-0 cpyrt">By continuing you agree to our <a href="#" class="text-danger">Terms of service</a><br>
+    and <a href="#" class="text-danger">Privacy & Legal Policy.</a></p>
+</footer>
+</html>
+
+<script>
+  function validate(){
+    var patt=[6,7,8,9];
+    var x= document.getElementById("mobile").value;
+    var bool = false;
+    for(var a of patt)    
+    {
+      var i= x[0];
+      if(i==a && x.length==10)
+      {
+        bool=true;
+        break
+      }
+    }
+    if(bool===false)
+    {
+      document.getElementById("err").className="text-danger errtrigger";
+      return;
+    }
+    else{
+      document.getElementById("err").className="text-danger error";
+    }
+
+    
+  }
+</script>
